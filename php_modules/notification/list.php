@@ -10,7 +10,7 @@
             <?php $comments->gravatar(40);?>
           </div>
           <div class="notification-list-item-content">
-            <div class="notification-list-item-title"><strong><?php $comments->author();?></strong> 回复了你的 <a class="notification-list-item-link" href="<?php echo $other['permalink']; ?>" target="_blank" title="<?php echo $other['permalink']; ?>"><?php echo $other['title']; ?></a></div>
+            <div class="notification-list-item-title"><strong><?php $comments->author();?></strong> replied to your <a class="notification-list-item-link" href="<?php echo $other['permalink']; ?>" target="_blank" title="<?php echo $other['permalink']; ?>"><?php echo $other['title']; ?></a></div>
             <div class="notification-list-item-msg"><?php $comments->excerpt(120);?></div>
             <div class="notification-list-item-footer">
               <div class="notification-list-item-footer-left">
@@ -22,12 +22,12 @@
                 <?php if ($this->user->hasLogin()): ?>
                   <a class="notification-list-item-manage" href="<?php $this->options->adminUrl();?>manage-comments.php?cid=<?php echo $comments->cid; ?>">
                   <i class="jj-icon jj-icon-setting notification-list-item-manage-icon"></i>
-                  <span>管理</span>
+                  <span>Manage</span>
                 </a>
                 <?php endif;?>
-                <a class="notification-list-item-comment" href="<?php $comments->permalink();?>" target="_self" title="回复">
+                <a class="notification-list-item-comment" href="<?php $comments->permalink();?>" target="_self" title="Reply">
                   <i class="jj-icon jj-icon-message notification-list-item-comment-icon"></i>
-                  <span>回复</span>
+                  <span>Reply</span>
                 </a>
               </div>
             </div>
@@ -35,7 +35,7 @@
         </div>
       <?php endwhile;?>
     <?php else: ?>
-      <div class="notification-list-empty">暂无消息</div>
+      <div class="notification-list-empty">No messages</div>
     <?php endif;?>
   </div>
 </div>

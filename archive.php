@@ -5,7 +5,7 @@
 ?>
 <?php if ( ! isAjax()): ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
   <?php $this->need('./php_modules/notes.php');?>
 <head>
   <?php $this->need('./php_modules/default_head.php');?>
@@ -33,7 +33,7 @@
 <?php if ( ! isAjax()): ?>
         </div>
         <div class="main-right">
-          <?php $this->need('./php_modules/home/recent_comments.php');?>
+          <?php $this->need('./php_modules/home/latest_posts.php');?>
           <?php $this->need('./php_modules/home/theme_tool.php');?>
           <?php $this->need('./php_modules/footer.php');?>
         </div>

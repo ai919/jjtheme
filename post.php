@@ -3,7 +3,7 @@
 }
 ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
   <?php $this->need('./php_modules/notes.php');?>
 <head>
   <?php $this->need('./php_modules/default_head.php');?>
@@ -18,17 +18,14 @@
     <div class="container">
       <div class="main-content post-content">
         <div class="main-left">
-          <?php $this->need('./php_modules/article_tool.php');?>
           <div class="article-content-wrapper">
             <?php $this->need('./php_modules/article_content.php');?>
             <?php $this->need('./php_modules/article_relevant_info.php');?>
             <?php $this->need('./php_modules/copyright.php');?>
           </div>
-          <?php $this->need('./php_modules/comment/comment.php');?>
           <?php $this->need('./php_modules/post/articles_related.php');?>
         </div>
         <div class="main-right">
-          <?php $this->need('./php_modules/article_author.php');?>
           <?php $this->need('./php_modules/post/latest_posts.php');?>
           <div class="post-right-sticky">
           <?php $this->need('./php_modules/post/directory_tree.php');?>

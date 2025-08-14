@@ -3,7 +3,7 @@
 }
 ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
   <?php $this->need('./php_modules/notes.php');?>
 <head>
   <?php $this->need('./php_modules/default_head.php');?>
@@ -26,7 +26,6 @@
           <?php $this->need('./php_modules/comment/comment.php');?>
         </div>
         <div class="main-right">
-          <?php $this->need('./php_modules/article_author.php');?>
           <?php $this->need('./php_modules/post/directory_tree.php');?>
         </div>
       </div>

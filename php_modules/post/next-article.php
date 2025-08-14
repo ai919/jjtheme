@@ -12,7 +12,7 @@ $text  = $match[3][0];?>
   <div class="next-article immersion-hide">
     <div class="next-article-content">
       <div class="next-article-head">
-        <h3 class="next-article-title">下一篇</h3>
+        <h3 class="next-article-title">Next Post</h3>
       </div>
       <div class="next-article-body">
         <a class="next-article-link" href="<?php echo $href; ?>" title="<?php echo $title; ?>"><?php echo $text; ?></a>
