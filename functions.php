@@ -355,7 +355,7 @@ function seoUrl($that)
     //     $url = $that->permalink();
     // }
     // return $url;
-    echo $that->request->getRequestUrl();
+    echo htmlspecialchars($that->request->getRequestUrl(), ENT_QUOTES);
 }
 
 /**
