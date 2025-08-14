@@ -11,16 +11,16 @@ $linksLink = getHidePage($this, 'links');
       <?php if (!empty($linksLink["href"])): ?>
         <a href="<?php echo $linksLink["href"]; ?>" target="_self" title="<?php echo $linksLink["title"]; ?>"><?php echo $linksLink["title"]; ?></a>
       <?php endif;?>
-      <a href="<?php $this->options->siteUrl();?>sitemap.xml" target="_blank" title="站点地图">站点地图</a>
+      <a href="<?php $this->options->siteUrl();?>sitemap.xml" target="_blank" title="Sitemap">Sitemap</a>
     </div>
     <div class="footer-item">
-      版权所有：<?php $this->options->title();?>
+      Copyright: <?php $this->options->title();?>
     </div>
     <div class="footer-item">
-      联系地址：<?php $this->options->address();?>
+      Address: <?php $this->options->address();?>
     </div>
     <div class="footer-item">
-      <span>联系邮箱：</span><a href="mailto:<?php $this->author->mail();?>" target="_self"><?php $this->author->mail();?></a>
+      <span>Email:</span><a href="mailto:<?php $this->author->mail();?>" target="_self"><?php $this->author->mail();?></a>
     </div>
     <div class="footer-item">
       <a href="<?php $this->options->siteUrl();?>" target="_self" title="<?php $this->options->title();?>">&copy;<?php echo date('Y'); ?> <?php $this->options->title();?></a>
