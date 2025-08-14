@@ -11,14 +11,14 @@ $sql = $db->select()->from('table.comments')
 $result  = $db->fetchAll($sql);
 $content = $this->content;
 //a链接增加_blank
-$content = preg_replace('/<a href=\"(.*?)\">(.*?)<\/a>/sm', '<a href="$1" target="_blank">$2</a>', $content);
+$content = preg_replace('/<a href="(.*?)">(.*?)<\/a>/sm', '<a href="$1" target="_blank">$2</a>', $content);
 //todo
 $content = todoListFormatted($content);
 //回复可见
 if ($this->user->hasLogin() || $result) {
     $content = preg_replace("/\[hide\](<br>)?(.*?)\[\/hide\]/sm", '$2', $content);
 } else {
-    $content = preg_replace("/\[hide\](.*?)\[\/hide\]/sm", '<div class="respond-visible">此处内容已隐藏<a  href="#comments">回复</a>后方可阅读。</div>', $content);
+    $content = preg_replace("/\[hide\](.*?)\[\/hide\]/sm", '<div class="respond-visible">Content hidden. <a href="#comments">Reply</a> to view.</div>', $content);
 }
 
 echo $content;

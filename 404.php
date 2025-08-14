@@ -3,7 +3,7 @@
 }
 ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
   <?php $this->need('./php_modules/notes.php');?>
 <head>
   <?php $this->need('./php_modules/default_head.php');?>
@@ -31,9 +31,9 @@
             </div>
             <div class="error-card-body">
               <div class="error-title">
-                <strong>404.</strong>出现了一个错误。
+                <strong>404.</strong> An error occurred.
               </div>
-              <div class="error-desc">也许可以尝试一下其他方式（空格 || 触摸）</div>
+              <div class="error-desc">Maybe try another method (spacebar or touch)</div>
             </div>
           </div>
         <?php else: ?>
@@ -42,7 +42,7 @@
               <img class="juejin-error-card-img" src="<?php $this->options->themeUrl('/static/images/404.svg');?>" alt="404">
             </div>
             <div class="juejin-error-card-footer">
-              <a class="juejin-error-card-btn" href="<?php $this->options->siteUrl();?>" target="_self">返回首页</a>
+              <a class="juejin-error-card-btn" href="<?php $this->options->siteUrl();?>" target="_self">Return Home</a>
             </div>
           </div>
         <?php endif;?>

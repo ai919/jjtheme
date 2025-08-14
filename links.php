@@ -9,7 +9,7 @@ if ( ! defined('__TYPECHO_ROOT_DIR__')) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
   <?php $this->need('./php_modules/notes.php');?>
 <head>
   <?php $this->need('./php_modules/default_head.php');?>

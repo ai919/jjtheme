@@ -40,7 +40,7 @@
               <?php endif;?>
             </div>
             <div class="comment-list-item-outer">
-              <div class="comment-list-item-reply"><?php $comments->reply('<i class="jj-icon jj-icon-message comment-list-item-reply-icon"></i>回复');?></div>
+              <div class="comment-list-item-reply"><?php $comments->reply('<i class="jj-icon jj-icon-message comment-list-item-reply-icon"></i>Reply');?></div>
             </div>
           </div>
         </div>

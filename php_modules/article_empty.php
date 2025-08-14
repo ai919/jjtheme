@@ -1,5 +1,5 @@
 <div class="article-empty">
   <div class="article-empty-content">
-    <span>列表为空</span>
+    <span>No items</span>
   </div>
 </div>

@@ -96,6 +96,7 @@ function themeConfig($form)
 {
     global $markdownThemeMap;
 
+
     // head标签底部插入代码
     $headInsertCode = new \Typecho\Widget\Helper\Form\Element\Textarea(
         'headInsertCode',
@@ -280,10 +281,10 @@ function themeConfig($form)
 function blogTitle($that)
 {
     $before = $that->archiveTitle(array(
-        'category' => _t('分类 %s 下的文章'),
-        'search' => _t('包含关键字 %s 的文章'),
-        'tag' => _t('标签 %s 下的文章'),
-        'author' => _t('%s 发布的文章'),
+        'category' => 'Posts in category %s',
+        'search'   => 'Posts containing keyword %s',
+        'tag'      => 'Posts tagged %s',
+        'author'   => 'Posts by %s',
     ), '', ' - ');
     $title = Helper::options()->title();
     return $before . $title;
@@ -879,7 +880,7 @@ function getDirectoryTree()
         // $index = '<div id="toc-container">'."\n".'<div id="toc">'."\n".'<strong>文章目录</strong>'."\n".$index.'</div>'."\n".'</div>'."\n";
     }
     if (!$index) {
-        echo '<ul class="directory-tree-list"><div class="directory-tree-list-empty">暂无目录</div></ul>';
+        echo '<ul class="directory-tree-list"><div class="directory-tree-list-empty">No directory</div></ul>';
     } else {
         echo $index;
     }
@@ -974,7 +975,7 @@ function removeChildren($list, $depth, $currentDepth = 0)
 function generateTreeTemplate($arr, $depth, $currentDepth = 1, $isChildren = false)
 {
     if (count($arr) <= 0) {
-        return '<div class="directory-tree-list-empty">暂无目录</div>';
+        return '<div class="directory-tree-list-empty">No directory</div>';
     }
     if ($currentDepth > $depth) {
         return '';
@@ -1169,7 +1170,7 @@ function getArticleSummary($that, $maxLength = 80)
     $content = $that->excerpt;
     $abstract = Typecho_Common::fixHtml(Typecho_Common::subStr($content, 0, $maxLength, '...'));
     if (empty($abstract)) {
-        $abstract = _t('暂无简介');
+        $abstract = 'No description';
     }
     return urlencode(strip_tags($abstract));
 }
@@ -1528,6 +1529,9 @@ function getArticleDetailRecommended()
 //主题themeInit函数
 function themeInit($archive)
 {
+    // 设置前端语言
+    $options = Helper::options();
+
     //评论回复楼层最高999层.这个正常设置最高只有7层
     Helper::options()->commentsMaxNestingLevels = 999;
     //自动增加浏览次数
