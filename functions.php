@@ -545,6 +545,9 @@ function promo($widget)
     // 获取操作
     $operate = $widget->request->get('operate');
     $field = $widget->request->get('field');
+    if (!in_array($operate, $allowOperates, true) || !in_array($field, $allowFields, true)) {
+        $widget->response->throwJson(['status'=>0,'msg'=>'非法请求']);
+    }
     $value = $widget->request->filter('int')->get('value');
     $value = $value === null ? 100 : $value; // 100 起步
 
