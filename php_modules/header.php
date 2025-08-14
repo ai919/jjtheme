@@ -1,5 +1,5 @@
 <header id="header" class="header">
-  <div class="header-container">
+  <div class="header-container" style="max-width:1140px;margin:0 auto;width:100%;">
     <div class="header-content">
       <div class="header-left">
         <nav class="header-nav">
