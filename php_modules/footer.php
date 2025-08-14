@@ -11,7 +11,7 @@ $linksLink = getHidePage($this, 'links');
       <?php if (!empty($linksLink["href"])): ?>
         <a href="<?php echo $linksLink["href"]; ?>" target="_self" title="<?php echo $linksLink["title"]; ?>"><?php echo $linksLink["title"]; ?></a>
       <?php endif;?>
-      <a href="<?php $this->options->siteUrl();?>sitemap.xml" target="_blank" title="Sitemap">Sitemap</a>
+      <a href="<?php $this->options->siteUrl();?>sitemap" target="_blank" title="Sitemap">Sitemap</a>
     </div>
     <div class="footer-item">
       Copyright: <?php $this->options->title();?>
