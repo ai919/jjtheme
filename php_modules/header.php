@@ -2,18 +2,17 @@
   <div class="header-container">
     <div class="header-content">
       <div class="header-left">
-        <a class="header-logo" href="<?php $this->options->siteUrl();?>" target="_self"><?php $this->options->title();?></a>
         <nav class="header-nav">
           <div class="header-nav-mobile-menu-wrap">
-            <div class="header-nav-mobile-menu">
-              HOME
-              <i class="jj-icon jj-icon-down header-nav-mobile-menu-icon"></i>
+              <div class="header-nav-mobile-menu" style="font-size:24px;font-weight:bold;">
+                <?php $this->options->title();?>
+                <i class="jj-icon jj-icon-down header-nav-mobile-menu-icon"></i>
             </div>
           </div>
           <ul class="header-nav-list">
             <li>
               <a class="header-nav-list-item <?php if ($this->is('index')) {echo 'active';}
-;?>"  target="_self" href="<?php $this->options->siteUrl();?>" title="HOME">HOME</a>
+  ;?>"  target="_self" href="<?php $this->options->siteUrl();?>" title="<?php $this->options->title();?>" style="font-size:24px;font-weight:bold;"><?php $this->options->title();?></a>
             </li>
             <?php $this->widget('Widget_Contents_Page_List')->to($pages);?>
             <?php while ($pages->next()): ?>
