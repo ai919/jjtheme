@@ -1132,7 +1132,7 @@ function get_comment_at($coid)
         $author = $arow['author'] ?? '';
 
         if ($author) {
-            $href = '<a class="comment-list-item-relation" href="#comment-' . $parent . '">@' . $author . '</a>';
+            $href = '<a class="comment-list-item-relation" href="#comment-' . $parent . '">@' . htmlspecialchars($author, ENT_QUOTES) . '</a>';
             echo $href;
         } else {
             echo '';
