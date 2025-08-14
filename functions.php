@@ -506,7 +506,7 @@ function articleViews($that, $format0 = '%d', $format1 = '%d', $formats = '%d', 
     if ($return) {
         return $fieldValue;
     } else {
-        return $fieldValue;
+        echo $fieldValue;
     }
 }
 
