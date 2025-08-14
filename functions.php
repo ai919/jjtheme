@@ -1447,14 +1447,20 @@ function todoListFormatted($html)
     return $html;
 }
 
-/** 计算文章的阅读时间 */
+/**
+ * Calculate the reading time of an article.
+ *
+ * The function estimates reading time based on a speed of roughly
+ * 250 characters per minute and returns a human‑readable English
+ * string such as "Read 2 minutes" or "Read 1 hour 5 minutes".
+ */
 function articleReadingTime($text)
 {
     $length = mb_strlen(strip_tags($text), 'utf-8');
-    // 计算阅读时间（分钟）
+    // Calculate the reading time (minutes)
     $readingTime = ceil($length / 250);
 
-    // 转换阅读时间为小时和分钟
+    // Convert the reading time to hours and minutes
     $hours = floor($readingTime / 60);
     $minutes = $readingTime % 60;
 
@@ -1463,17 +1469,19 @@ function articleReadingTime($text)
         $hours = $hours % 24;
 
         if ($hours == 0) {
-            return "阅读" . $days . "天";
+            return 'Read ' . $days . ' ' . ($days > 1 ? 'days' : 'day');
         } else {
-            return "阅读" . $days . "天" . $hours . "小时";
+            return 'Read ' . $days . ' ' . ($days > 1 ? 'days' : 'day') . ' ' .
+                $hours . ' ' . ($hours > 1 ? 'hours' : 'hour');
         }
     } else {
         if ($hours == 0) {
-            return "阅读" . $minutes . "分钟";
+            return 'Read ' . $minutes . ' ' . ($minutes > 1 ? 'minutes' : 'minute');
         } elseif ($minutes == 0) {
-            return "阅读" . $hours . "小时";
+            return 'Read ' . $hours . ' ' . ($hours > 1 ? 'hours' : 'hour');
         } else {
-            return "阅读" . $hours . "小时" . $minutes . "分钟";
+            return 'Read ' . $hours . ' ' . ($hours > 1 ? 'hours' : 'hour') . ' ' .
+                $minutes . ' ' . ($minutes > 1 ? 'minutes' : 'minute');
         }
     }
 }
