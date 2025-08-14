@@ -334,7 +334,7 @@ function blogKeywords($that)
     if (isOtherPage($that)) {
         $keywords = Helper::options()->keywords();
     } else {
-        $keywords = $that->category(',', false) + $that->tags(',', false);
+        $keywords = $that->category(',', false) . $that->tags(',', false);
     }
     return $keywords;
 }
